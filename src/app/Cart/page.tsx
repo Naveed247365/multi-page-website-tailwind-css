@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 interface CartItem {
   id: number;
@@ -63,10 +64,12 @@ export default function Cart() {
             {cartItems.map((item) => (
               <div key={item.id} className="flex items-center justify-between border p-4 rounded-lg shadow-sm">
                 <div className="flex items-center space-x-4">
-                  <img 
+                  <Image 
                     src={item.image} 
                     alt={item.name} 
-                    className="w-20 h-20 object-cover rounded"
+                    width={80}
+                    height={80}
+                    className="object-cover rounded"
                   />
                   <div>
                     <h3 className="font-semibold capitalize">{item.name}</h3>

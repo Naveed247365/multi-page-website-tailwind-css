@@ -36,6 +36,10 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
+  const handleLinkClick = () => {
+    // Implement the logic for handling link click
+  };
+
   return (
     <header className='bg-blue-500 text-white py-5 flex justify-between items-center px-10 relative z-50'>
       <Link href="/" className='text-2xl font-bold hover:text-blue-100'>

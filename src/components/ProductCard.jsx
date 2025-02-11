@@ -11,7 +11,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <div className="product-card">
-      // ... existing code ...
+      {/* Some comment */}
+      <div>...</div>
       <button 
         className={`add-to-cart ${isAdded ? 'added' : ''}`}
         onClick={handleAddToCart}

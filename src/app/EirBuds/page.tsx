@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const EirBuds = () => {
   const router = useRouter();
@@ -89,10 +90,11 @@ const EirBuds = () => {
       {eirData.map((eir) => (
         <div key={eir.id} className='product-card bg-white p-5 rounded-md shadow-md text-center flex flex-col'>
           <div className="relative w-full pt-[100%] mb-4">
-            <img 
+            <Image 
               src={eir.image} 
               alt={eir.name} 
-              className={`absolute top-0 left-0 w-full h-full object-contain p-4 transition-transform duration-300 hover:scale-110 ${
+              fill
+              className={`object-contain p-4 transition-transform duration-300 hover:scale-110 ${
                 loadedImages.has(eir.id) ? 'loaded' : ''
               }`}
               onLoad={() => handleImageLoad(eir.id)}
