@@ -48,8 +48,9 @@ const Header = () => {
         <Link href="/About" className='hover:text-blue-100'>About</Link>
         <Link href="/EirBuds" className='hover:text-blue-100'>EirBuds</Link>
         <Link href="/Contact" className='hover:text-blue-100'>Contact</Link>
-        <Link href="/Cart" className='hover:text-blue-100'>
-          <FaShoppingCart className='text-white text-xl'/>
+        <Link href="/Cart" className='hover:text-blue-100 flex items-center gap-2'>
+          <FaShoppingCart className='text-xl' />
+          Cart
         </Link>
       </nav>
 
@@ -79,7 +80,10 @@ const Header = () => {
             <Link href="/About" className='hover:text-blue-100'>About</Link>
             <Link href="/EirBuds" className='hover:text-blue-100'>EirBuds</Link>
             <Link href="/Contact" className='hover:text-blue-100'>Contact</Link>
-            <Link href="/Cart" className='hover:text-blue-100'>Cart</Link>
+            <Link href="/Cart" className='hover:text-blue-100 flex items-center justify-center gap-2'>
+              <FaShoppingCart className='text-xl' />
+              Cart
+            </Link>
           </nav>
         </div>
       )}
